@@ -1,0 +1,31 @@
+{
+  "name": "evolution-ai",
+  "version": "1.0.0",
+  "description": "Develop entity by evolution algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Matyáš Klimeš",
+  "license": "ISC",
+  "keywords": [
+    "AI",
+    "evolution",
+    "machine",
+    "learning",
+    "biological",
+    "selection"
+  ],
+  "dependencies": {
+    "datamixering": "^1.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CZmatyasZERO/evolutionAI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CZmatyasZERO/evolutionAI/issues"
+  },
+  "homepage": "https://github.com/CZmatyasZERO/evolutionAI#readme"
+}
