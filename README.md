@@ -1,12 +1,13 @@
-<img align="center" width="100px" height="100px" src="unkown" alt="logo">
+<img align="center" width="100px" height="100px" src="https://raw.githubusercontent.com/CZmatyasZERO/evolutionAI/main/assets/logo.svg" alt="logo">
 <h1>EvolutionAI v1.0.0</h1>
 <p>Develops entity&apos;s genome by "natural" selection. It works extremly fast and effective.</p>
 <h2>Functions</h2>
+
 |Function|Description|
 |--------|-----------|
 |simulate()|Creates new simulation. Can choose count of entities at start, code format of genomes and initial genome length.|
 |Kill()|Kills entity by ID|
-|Mutate()|Gives entity new childs to next generation and randomly mutate their genome, can choose count of childs, intensity of mutation and extendion of genome|
+|Mutate()|Gives entity new childs to next generation and randomly mutate their genome, can choose intensity of mutation and extendion of genome|
 |Pair()|Gives childs to new generation with genomes of combination parents&apos;s genome, can choose count of childs and preference of one of the parents|
 |PairandMutate()|Combination of Pair() and Mutate()|
 |PushNextSurvivors()|Moves live entities to next generation|
