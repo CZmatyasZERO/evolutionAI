@@ -1,6 +1,6 @@
 {
   "name": "evolution-ai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Develop entity by evolution algorithm",
   "main": "index.js",
   "scripts": {

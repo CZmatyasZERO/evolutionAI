@@ -1,5 +1,5 @@
 <img align="center" width="100px" height="100px" src="https://raw.githubusercontent.com/CZmatyasZERO/evolutionAI/main/assets/logo.svg" alt="logo">
-<h1>EvolutionAI v1.0.0</h1>
+<h1>EvolutionAI</h1>
 <img src="https://shields.io/npm/v/evolution-ai" alt="version">
 <img src="https://img.shields.io/bundlephobia/min/evolution-ai" alt="version">
 <p>Develops entity&apos;s genome by "natural" selection. It works extremly fast and effective.</p>
