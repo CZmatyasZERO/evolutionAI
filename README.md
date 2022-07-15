@@ -6,6 +6,7 @@
 <p>Develops entity&apos;s genome by "natural" selection. It works extremly fast and effective.</p>
 <h2>Install</h2>
 <p>NPM:</p>
+
 ```bash
 $ npm install evolution-ai
 ```
@@ -19,9 +20,11 @@ $ npm install evolution-ai
 |Mutate()|Gives entity new childs to next generation and randomly mutate their genome, can choose intensity of mutation and extendion of genome|
 |Pair()|Gives childs to new generation with genomes of combination parents&apos;s genome, can choose count of childs and preference of one of the parents|
 |PairandMutate()|Combination of Pair() and Mutate()|
+|isAlive()|Sends true, if entity is alive (checks if entity has any genome code)|
 |PushNextSurvivors()|Moves live entities to next generation|
 |getGenomeArr()|Gets array of entities in actual generation|
 |getChildsArr()|Gets array of entities in next generation|
+|NextGen()|Switch next generation to actual generation|
 
 <h2>Example</h2>
 

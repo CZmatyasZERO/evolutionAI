@@ -22,7 +22,7 @@ for (let i = 0; i < 100; i++) { // Loop for every generation
             //--END-EXAMPLE--
         }
         if(have === false) {
-            world.Mutate(i, 3) // If hasn´t it will multiply itself three times with little mutations
+            world.Mutate(i, 1) // If hasnt it will multiply itself three times with little mutations
         }
 
     }

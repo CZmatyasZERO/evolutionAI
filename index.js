@@ -8,21 +8,24 @@ function simulate(StartEntitiesCount = 5, CodeFormat = "ATCG", InitLengthFormat 
     } while (Entities.length !== StartEntitiesCount)
 
     function Kill(ID) {
-        Entities.splice(ID, 1)
+        Entities[ID] = undefined
     }
     
     function Mutate(ID, Childs = 5, Intensity = 0.1, Extend = 1) {
+        if(!Entities[ID]) return console.log("Mutate() Err: Entity isnt alive!")
         for (let i = 0; i < Childs; i++) {
             let RandomGenome = rt.getString(Entities[ID].split("").length + Extend, CodeFormat)
             NewGen.push(rt.stringJoin(RandomGenome, Entities[ID], 1 - Intensity))
         }
     }
     function Pair(ID1, ID2, Childs = 5, preference = 0.5) {
+        if(!Entities[ID]) return console.log("Pair() Err: Entity isnt alive!")
         for (let i = 0; i < Childs; i++) {
             NewGen.push(rt.stringJoin(Entities[ID1], Entities[ID2], preference))
         }
     }
     function PairAndMutate(ID1, ID2, Childs = 5, preference = 0.5, Intensity = 0.1, Extend = 1) {
+        if(!Entities[ID]) return console.log("PairAndMutate() Err: Entity isnt alive!")
         for (let i = 0; i < Childs; i++) {
             let RandomGenome = rt.getString(Entities[ID].split("").length + Extend, CodeFormat)
             NewGen.push(rt.stringJoin(rt.stringJoin(Entities[ID1], Entities[ID2], preference), RandomGenome, 1 - Intensity))
@@ -30,7 +33,9 @@ function simulate(StartEntitiesCount = 5, CodeFormat = "ATCG", InitLengthFormat 
     }
     function PushNextSurvivors() {
         Entities.forEach(entity => {
-            NewGen.unshift(entity)
+            if(entity !== undefined) {
+                NewGen.unshift(entity)
+            }
         })
         Entities = []
     }
@@ -46,6 +51,13 @@ function simulate(StartEntitiesCount = 5, CodeFormat = "ATCG", InitLengthFormat 
         return NewGen
     }
 
+    function isAlive(ID) {
+        if(Entities[ID] === undefined) {
+            return false
+        }
+        return true
+    }
+
     return {
         Kill,
         Mutate,
@@ -54,7 +66,8 @@ function simulate(StartEntitiesCount = 5, CodeFormat = "ATCG", InitLengthFormat 
         PushNextSurvivors,
         NextGen,
         getGenomeArr,
-        getChildsArr
+        getChildsArr,
+        isAlive
     }
 
 }
