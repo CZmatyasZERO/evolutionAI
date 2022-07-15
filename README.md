@@ -17,7 +17,7 @@
 <h2>Example</h2>
 
 ```javascript
-const evolution = require("./index") //write evolutionAI, not this
+const evolution = require("evolutionai")
 
 const world = evolution.simulate() //Start simulation
 for (let i = 0; i < 100; i++) { // Loop for every generation
